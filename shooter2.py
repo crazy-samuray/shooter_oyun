@@ -1,4 +1,5 @@
 from pygame import *
+import pygame
 from random import randint
 from time import time as timer #yeni
 
@@ -11,15 +12,15 @@ font2 = font.Font(None, 36)
  
 
 mixer.init()
-mixer.music.load('/Users/mizgin/Desktop/shooter/space.ogg')
+mixer.music.load('C://Users//Monster1//Documents//GitHub//shooter_oyun//space.ogg')
 mixer.music.play()
-fire_sound = mixer.Sound('/Users/mizgin/Desktop/shooter/fire.ogg')
+fire_sound = mixer.Sound('C://Users//Monster1//Documents//GitHub//shooter_oyun//fire.ogg')
  
-img_back = "/Users/mizgin/Desktop/shooter/galaxy.jpg" #oyunun arka planı
-img_bullet = "/Users/mizgin/Desktop/shooter/bullet.png" #mermi
-img_hero = "/Users/mizgin/Desktop/shooter/rocket.png" #kahraman
-img_enemy = "/Users/mizgin/Desktop/shooter/ufo.png" #düşman
-img_ast = "/Users/mizgin/Desktop/shooter/asteroid.png" #düşman #yeni
+img_back = "C://Users//Monster1//Documents//GitHub//shooter_oyun//galaxy.jpg" #oyunun arka planı
+img_bullet = "C://Users//Monster1//Documents//GitHub//shooter_oyun//bullet.png" #mermi
+img_hero = "C://Users//Monster1//Documents//GitHub//shooter_oyun//rocket.png" #kahraman
+img_enemy = "C://Users//Monster1//Documents//GitHub//shooter_oyun//ufo.png" #düşman
+img_ast = "C://Users//Monster1//Documents//GitHub//shooter_oyun//asteroid.png" #düşman #yeni
 
 score = 0 #düşmüş gemiler
 goal = 10 #Kazanmak için kaç gemiyi vurman gerekiyor
@@ -199,5 +200,5 @@ while run:
             asteroid = Enemy(img_ast, randint(30, win_width - 30), -40, 80, 50, randint(1, 7))
             asteroids.add(asteroid)
  
-time.delay(50)
+pygame.time.delay(50)
 
